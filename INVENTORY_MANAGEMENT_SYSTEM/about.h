@@ -66,9 +66,10 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(116, 258);
+			this->button1->Location = System::Drawing::Point(87, 210);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(150, 65);
+			this->button1->Size = System::Drawing::Size(112, 53);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"OK";
 			this->button1->UseVisualStyleBackColor = false;
@@ -85,10 +86,11 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Navy;
-			this->label1->Location = System::Drawing::Point(9, 9);
+			this->label1->Location = System::Drawing::Point(7, 7);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Padding = System::Windows::Forms::Padding(3, 3, 3, 42);
-			this->label1->Size = System::Drawing::Size(351, 221);
+			this->label1->Padding = System::Windows::Forms::Padding(2, 2, 2, 34);
+			this->label1->Size = System::Drawing::Size(276, 182);
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"The project was developed by\nShashan Lumbhani (23CS042),\nBanti Patel (23CS058), a"
 				L"nd \nDhaval Patel (23CS060), under\nthe guidance of Assistant \nProfessor Pinal Han"
@@ -97,17 +99,19 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			// 
 			// about
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(382, 353);
+			this->ClientSize = System::Drawing::Size(288, 293);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->button1);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(400, 400);
+			this->MaximumSize = System::Drawing::Size(304, 332);
 			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(400, 400);
+			this->MinimumSize = System::Drawing::Size(304, 332);
 			this->Name = L"about";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"ABOUT";
 			this->ResumeLayout(false);
 			this->PerformLayout();
