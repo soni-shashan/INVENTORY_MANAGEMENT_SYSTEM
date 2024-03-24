@@ -15,7 +15,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 	public ref class Main : public System::Windows::Forms::Form
 	{
 	public:
-		INVENTORYMANAGEMENTSYSTEM::excel^ Excel = gcnew INVENTORYMANAGEMENTSYSTEM::excel();
+		INVENTORYMANAGEMENTSYSTEM::excel^ Excel = gcnew INVENTORYMANAGEMENTSYSTEM::excel("INVENTORY.xlsx");
 		const char* _filename = "INVENTORY.xlsx";
 		Main(void)
 		{
@@ -23,7 +23,6 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			//
 			//TODO: Add the constructor code here
 			//
-			Excel->create_file();
 		}
 	protected:
 		/// <summary>
@@ -36,15 +35,6 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				delete components;
 			}
 		}
-
-	protected:
-
-
-
-	protected:
-
-	protected:
-
 	private:
 		/// <summary>
 		/// Required designer variable.

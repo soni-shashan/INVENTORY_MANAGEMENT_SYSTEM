@@ -35,10 +35,6 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			{
 				delete components;
 			}
-			if (check==true) {
-				Main^ show = gcnew Main;
-				show->Show();
-			}
 		}
 
 	private: System::Windows::Forms::Button^ button1;
