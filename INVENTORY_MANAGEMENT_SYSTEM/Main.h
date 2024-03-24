@@ -1,4 +1,6 @@
 #pragma once
+#include "libxl.h"
+using namespace libxl;
 
 namespace INVENTORYMANAGEMENTSYSTEM {
 
@@ -15,12 +17,24 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 	public ref class Main : public System::Windows::Forms::Form
 	{
 	public:
+		const wchar_t* _filename = L"INVENTORY.xlsx";
 		Main(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+				Book* book = xlCreateXMLBook();
+				if (!(book->load(_filename))) {
+					if (book) {
+						Sheet* sheet = book->addSheet(L"Sheet1");
+						if (sheet)
+						{
+							book->save(_filename);
+						}
+					}
+				}
+				book->release();
 		}
 
 	protected:
@@ -34,6 +48,8 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				delete components;
 			}
 		}
+
+	protected:
 
 	private:
 		/// <summary>
@@ -52,18 +68,21 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			// 
 			// Main
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(704, 681);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->ClientSize = System::Drawing::Size(1062, 1033);
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->MaximizeBox = false;
 			this->Name = L"Main";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Main";
+			this->Text = L"INVENTORY MANAGEMENT SYSTEM";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
+			this->Load += gcnew System::EventHandler(this, &Main::Main_Load);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: System::Void Main_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
 	};
 }

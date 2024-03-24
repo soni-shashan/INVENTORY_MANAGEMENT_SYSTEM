@@ -94,7 +94,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->label1->TabIndex = 2;
 			this->label1->Text = L"The project was developed by\nShashan Lumbhani (23CS042),\nBanti Patel (23CS058), a"
 				L"nd \nDhaval Patel (23CS060), under\nthe guidance of Assistant \nProfessor Pinal Han"
-				L"sora.";
+				L"sora and\nAbhishek Patel.";
 			this->label1->Click += gcnew System::EventHandler(this, &about::label1_Click);
 			// 
 			// about
