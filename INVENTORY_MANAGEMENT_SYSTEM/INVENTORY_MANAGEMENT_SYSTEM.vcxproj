@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="about.cpp" />
+    <ClCompile Include="excel.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MyForm.cpp" />
   </ItemGroup>
@@ -133,6 +134,7 @@
     <ClInclude Include="about.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="excel.h" />
     <ClInclude Include="Main.h">
       <FileType>CppForm</FileType>
     </ClInclude>

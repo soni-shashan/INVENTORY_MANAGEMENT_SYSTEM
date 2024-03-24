@@ -3,14 +3,14 @@ using namespace System;
 using namespace System::Windows::Forms;
 [STAThreadAttribute]
 
-int main(array<String^>^ args) {
+int main() {
 	Application::SetCompatibleTextRenderingDefault(false);
 	Application::EnableVisualStyles();
 	INVENTORYMANAGEMENTSYSTEM::MyForm frm;
 	Application::Run(% frm);
 	if (frm.check) {
-	INVENTORYMANAGEMENTSYSTEM::Main frm1;
-	Application::Run(% frm1);
+		INVENTORYMANAGEMENTSYSTEM::Main^ frm1 = gcnew INVENTORYMANAGEMENTSYSTEM::Main();
+		Application::Run(frm1);
 	}
 	return 0;
 }

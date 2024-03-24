@@ -1,42 +1,30 @@
 #pragma once
 #include "libxl.h"
+#include"excel.h"
 using namespace libxl;
-
 namespace INVENTORYMANAGEMENTSYSTEM {
-
 	using namespace System;
 	using namespace System::ComponentModel;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
 	/// <summary>
 	/// Summary for Main
 	/// </summary>
 	public ref class Main : public System::Windows::Forms::Form
 	{
 	public:
-		const wchar_t* _filename = L"INVENTORY.xlsx";
+		INVENTORYMANAGEMENTSYSTEM::excel^ Excel = gcnew INVENTORYMANAGEMENTSYSTEM::excel();
+		const char* _filename = "INVENTORY.xlsx";
 		Main(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
-				Book* book = xlCreateXMLBook();
-				if (!(book->load(_filename))) {
-					if (book) {
-						Sheet* sheet = book->addSheet(L"Sheet1");
-						if (sheet)
-						{
-							book->save(_filename);
-						}
-					}
-				}
-				book->release();
+			Excel->create_file();
 		}
-
 	protected:
 		/// <summary>
 		/// Clean up any resources being used.
@@ -48,6 +36,12 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				delete components;
 			}
 		}
+
+	protected:
+
+
+
+	protected:
 
 	protected:
 
