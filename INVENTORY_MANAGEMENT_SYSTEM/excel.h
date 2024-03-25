@@ -1,5 +1,7 @@
 #pragma once
 #include"libxl.h"
+#include<cstring>
+#include<cmath>
 using namespace libxl;
 namespace INVENTORYMANAGEMENTSYSTEM {
 	using namespace System;
@@ -28,6 +30,18 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			_name[length] = '\0';
 			return _name;
 		}
+		String^ ctos(const char* name) {
+			if (name == nullptr)
+				return nullptr;
+
+			int length = strlen(name);
+			String^ result = gcnew String("");
+			for (int i = 0; i < length; i++) {
+				result += static_cast<wchar_t>(name[i]);
+			}
+			return result;
+		}
+
 		int stoi(String^ value) {
 			try {
 				int intValue = Convert::ToInt32(value);
@@ -92,6 +106,89 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 							}
 						}
 						sheet->removeRow(row-2, row-2);
+						book->save(_filename);
+					}
+				}
+			}
+			book->release();
+		}
+		int last_data() {
+			Book* book = xlCreateXMLBookA();
+			if (book) {
+				if (book->load(_filename)) {
+					Sheet* sheet = book->getSheet(0);
+					if (sheet) {
+						int ans = sheet->lastRow() - 2;
+						book->release();
+						return ans;
+					}
+				}
+			}
+		}
+		String^ read_data(int row, int col) {
+			row = row + 2;
+			Book* book = xlCreateXMLBookA();
+			if (book) {
+				if (book->load(_filename)) {
+					Sheet* sheet = book->getSheet(0);
+					if (sheet->readNum(row,col)) {
+						book->release();
+						return Convert::ToString(sheet->readNum(row, col));
+					}
+					else
+					{
+						book->release();
+						return ctos(sheet->readStr(row, col));
+					}
+				}
+			}
+		}
+		int searchProductByName(String^ key) {
+			Book* book = xlCreateXMLBookA();
+			if(book){
+			if (book->load(_filename)) {
+				Sheet* sheet = book->getSheet(0);
+				if (sheet) {
+					for (int i = 0;i < sheet->lastRow();i++) {
+						if (read_data(i, 1) == key) {
+							return i;
+						}
+					}
+					book->release();
+				}
+			}
+		}
+		}
+		int searchProductById(String^ key) {
+			Book* book = xlCreateXMLBookA();
+			if (book) {
+				if (book->load(_filename)) {
+					Sheet* sheet = book->getSheet(0);
+					if (sheet) {
+						for (int i = 0;i < sheet->lastRow();i++) {
+							if (read_data(i, 2) == key) {
+								return i;
+							}
+						}
+						book->release();
+					}
+				}
+			}
+		}
+		void updateProduct(int row, int col,String^ info) {
+			row = row + 2;
+			Book* book = xlCreateXMLBookA();
+			if (book) {
+				if (book->load(_filename)) {
+					Sheet* sheet = book->getSheet(0);
+					if (sheet) {
+						if(col==0){}
+						else if (col == 1 || col == 2) {
+							sheet->writeStr(row, col, stoc(info));
+						}
+						else if (col == 3 || col == 4) {
+							sheet->writeNum(row, col, stoi(info));
+						}else{}
 						book->save(_filename);
 					}
 				}

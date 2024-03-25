@@ -91,6 +91,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"ADD PRODUCT";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			this->tabPage1->Click += gcnew System::EventHandler(this, &Main::tabPage1_Click);
 			// 
 			// tabPage2
 			// 
@@ -115,20 +116,20 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			// 
 			// tabPage4
 			// 
-			this->tabPage4->Location = System::Drawing::Point(4, 25);
+			this->tabPage4->Location = System::Drawing::Point(4, 29);
 			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage4->Size = System::Drawing::Size(1750, 916);
+			this->tabPage4->Size = System::Drawing::Size(1750, 912);
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"SEARCH PRODUCT";
 			this->tabPage4->UseVisualStyleBackColor = true;
 			// 
 			// tabPage5
 			// 
-			this->tabPage5->Location = System::Drawing::Point(4, 25);
+			this->tabPage5->Location = System::Drawing::Point(4, 29);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage5->Size = System::Drawing::Size(1750, 916);
+			this->tabPage5->Size = System::Drawing::Size(1750, 912);
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"DISPLAY INVENTORY";
 			this->tabPage5->UseVisualStyleBackColor = true;
@@ -155,5 +156,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 	}
 	private: System::Void tabPage3_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void tabPage1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }
