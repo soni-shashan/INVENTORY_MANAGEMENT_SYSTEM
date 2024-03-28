@@ -75,7 +75,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			}
 			book->release();
 		}
-		void rempve_data(int sr) {
+		void remove_data(int sr) {
 			Book* book = xlCreateXMLBook();
 			if (book) {
 				if (book->load(_filename)) {
