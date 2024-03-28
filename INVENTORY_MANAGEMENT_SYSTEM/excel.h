@@ -118,7 +118,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
 					if (sheet) {
-						int ans = sheet->lastRow() - 2;
+						int ans = sheet->lastRow()-2;
 						book->release();
 						return ans;
 					}
@@ -132,13 +132,13 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
 					if (sheet->readNum(row,col)) {
-						book->release();
 						return Convert::ToString(sheet->readNum(row, col));
+						book->release();
 					}
 					else
 					{
-						book->release();
 						return ctos(sheet->readStr(row, col));
+						book->release();
 					}
 				}
 			}
