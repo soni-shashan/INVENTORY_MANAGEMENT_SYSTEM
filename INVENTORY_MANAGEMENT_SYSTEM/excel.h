@@ -61,7 +61,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
 					int row = sheet->lastRow();
-					int sr = row+1;
+					int sr = row-2;
 					if (sheet) {
 						sheet->writeStr(0, 0, "INVENTORY MANAGEMENT SYSTEM");
 						sheet->writeNum(row, 0, sr);
