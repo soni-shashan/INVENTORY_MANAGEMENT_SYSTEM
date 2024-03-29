@@ -4,6 +4,7 @@
 #include"delete_conform.h"
 #include<thread>
 #include<chrono>
+#include"update.h"
 using namespace libxl;
 namespace INVENTORYMANAGEMENTSYSTEM {
 	using namespace System;
@@ -48,12 +49,23 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::DataGridView^ dataGridView3;
+	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column12;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column13;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column14;
-	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::TabControl^ tabControl2;
+	private: System::Windows::Forms::TabPage^ tabPage6;
+	private: System::Windows::Forms::TabPage^ tabPage7;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Label^ label6;
+	private: System::Windows::Forms::Label^ label7;
+	private: System::Windows::Forms::Label^ label9;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::Label^ label8;
 	public:
 		   INVENTORYMANAGEMENTSYSTEM::excel^ Excel = gcnew INVENTORYMANAGEMENTSYSTEM::excel("INVENTORY.xlsx");
 		   const char* _filename = "INVENTORY.xlsx";
@@ -117,6 +129,17 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->Column13 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column14 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+			this->tabControl2 = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage6 = (gcnew System::Windows::Forms::TabPage());
+			this->label7 = (gcnew System::Windows::Forms::Label());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->label6 = (gcnew System::Windows::Forms::Label());
+			this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+			this->tabPage7 = (gcnew System::Windows::Forms::TabPage());
+			this->label9 = (gcnew System::Windows::Forms::Label());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
@@ -131,6 +154,10 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->tabPage3->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			this->tabPage4->SuspendLayout();
+			this->tabControl2->SuspendLayout();
+			this->tabPage6->SuspendLayout();
+			this->tabPage7->SuspendLayout();
 			this->tabPage5->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
@@ -372,7 +399,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->button4->ForeColor = System::Drawing::Color::White;
 			this->button4->Location = System::Drawing::Point(35, 6);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(124, 37);
+			this->button4->Size = System::Drawing::Size(213, 37);
 			this->button4->TabIndex = 1;
 			this->button4->Text = L"LOAD DATA";
 			this->button4->UseVisualStyleBackColor = false;
@@ -399,6 +426,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->Column7->MinimumWidth = 6;
 			this->Column7->Name = L"Column7";
 			this->Column7->ReadOnly = true;
+			this->Column7->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->Column7->Width = 125;
 			// 
 			// Column11
@@ -407,6 +435,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->Column11->MinimumWidth = 6;
 			this->Column11->Name = L"Column11";
 			this->Column11->ReadOnly = true;
+			this->Column11->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->Column11->Width = 125;
 			// 
 			// Column12
@@ -415,6 +444,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->Column12->MinimumWidth = 6;
 			this->Column12->Name = L"Column12";
 			this->Column12->ReadOnly = true;
+			this->Column12->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->Column12->Width = 125;
 			// 
 			// Column13
@@ -423,6 +453,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->Column13->MinimumWidth = 6;
 			this->Column13->Name = L"Column13";
 			this->Column13->ReadOnly = true;
+			this->Column13->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->Column13->Width = 125;
 			// 
 			// Column14
@@ -431,10 +462,12 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->Column14->MinimumWidth = 6;
 			this->Column14->Name = L"Column14";
 			this->Column14->ReadOnly = true;
+			this->Column14->SortMode = System::Windows::Forms::DataGridViewColumnSortMode::NotSortable;
 			this->Column14->Width = 125;
 			// 
 			// tabPage4
 			// 
+			this->tabPage4->Controls->Add(this->tabControl2);
 			this->tabPage4->Location = System::Drawing::Point(4, 29);
 			this->tabPage4->Name = L"tabPage4";
 			this->tabPage4->Padding = System::Windows::Forms::Padding(3);
@@ -442,6 +475,131 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->tabPage4->TabIndex = 3;
 			this->tabPage4->Text = L"SEARCH PRODUCT";
 			this->tabPage4->UseVisualStyleBackColor = true;
+			// 
+			// tabControl2
+			// 
+			this->tabControl2->Controls->Add(this->tabPage6);
+			this->tabControl2->Controls->Add(this->tabPage7);
+			this->tabControl2->Location = System::Drawing::Point(3, 3);
+			this->tabControl2->Name = L"tabControl2";
+			this->tabControl2->SelectedIndex = 0;
+			this->tabControl2->Size = System::Drawing::Size(1741, 903);
+			this->tabControl2->TabIndex = 0;
+			// 
+			// tabPage6
+			// 
+			this->tabPage6->Controls->Add(this->label7);
+			this->tabPage6->Controls->Add(this->button5);
+			this->tabPage6->Controls->Add(this->label6);
+			this->tabPage6->Controls->Add(this->textBox5);
+			this->tabPage6->Location = System::Drawing::Point(4, 29);
+			this->tabPage6->Name = L"tabPage6";
+			this->tabPage6->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage6->Size = System::Drawing::Size(1733, 870);
+			this->tabPage6->TabIndex = 0;
+			this->tabPage6->Text = L"BY PRODUCT NAME";
+			this->tabPage6->UseVisualStyleBackColor = true;
+			this->tabPage6->Click += gcnew System::EventHandler(this, &Main::tabPage6_Click);
+			// 
+			// label7
+			// 
+			this->label7->AutoSize = true;
+			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label7->ForeColor = System::Drawing::Color::Blue;
+			this->label7->Location = System::Drawing::Point(39, 315);
+			this->label7->Name = L"label7";
+			this->label7->Size = System::Drawing::Size(0, 25);
+			this->label7->TabIndex = 3;
+			// 
+			// button5
+			// 
+			this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button5->Font = (gcnew System::Drawing::Font(L"Nirmala UI Semilight", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button5->ForeColor = System::Drawing::Color::White;
+			this->button5->Location = System::Drawing::Point(44, 158);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(233, 119);
+			this->button5->TabIndex = 2;
+			this->button5->Text = L"SEARCH";
+			this->button5->UseVisualStyleBackColor = false;
+			this->button5->Click += gcnew System::EventHandler(this, &Main::button5_Click);
+			// 
+			// label6
+			// 
+			this->label6->AutoSize = true;
+			this->label6->Location = System::Drawing::Point(26, 49);
+			this->label6->Name = L"label6";
+			this->label6->Size = System::Drawing::Size(350, 20);
+			this->label6->TabIndex = 1;
+			this->label6->Text = L"SEARCH PRODUCT (CASE SENSITIVE)";
+			// 
+			// textBox5
+			// 
+			this->textBox5->Location = System::Drawing::Point(30, 83);
+			this->textBox5->Name = L"textBox5";
+			this->textBox5->Size = System::Drawing::Size(391, 26);
+			this->textBox5->TabIndex = 0;
+			this->textBox5->TextChanged += gcnew System::EventHandler(this, &Main::textBox5_TextChanged);
+			// 
+			// tabPage7
+			// 
+			this->tabPage7->Controls->Add(this->label9);
+			this->tabPage7->Controls->Add(this->button6);
+			this->tabPage7->Controls->Add(this->textBox6);
+			this->tabPage7->Controls->Add(this->label8);
+			this->tabPage7->Location = System::Drawing::Point(4, 29);
+			this->tabPage7->Name = L"tabPage7";
+			this->tabPage7->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage7->Size = System::Drawing::Size(1733, 870);
+			this->tabPage7->TabIndex = 1;
+			this->tabPage7->Text = L"BY PRODUCT ID";
+			this->tabPage7->UseVisualStyleBackColor = true;
+			// 
+			// label9
+			// 
+			this->label9->AutoSize = true;
+			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label9->ForeColor = System::Drawing::Color::Blue;
+			this->label9->Location = System::Drawing::Point(46, 313);
+			this->label9->Name = L"label9";
+			this->label9->Size = System::Drawing::Size(0, 25);
+			this->label9->TabIndex = 3;
+			// 
+			// button6
+			// 
+			this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(192)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button6->ForeColor = System::Drawing::Color::White;
+			this->button6->Location = System::Drawing::Point(47, 178);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(245, 96);
+			this->button6->TabIndex = 2;
+			this->button6->Text = L"SEARCH";
+			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &Main::button6_Click);
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(50, 94);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(343, 26);
+			this->textBox6->TabIndex = 1;
+			this->textBox6->TextChanged += gcnew System::EventHandler(this, &Main::textBox6_TextChanged);
+			// 
+			// label8
+			// 
+			this->label8->AutoSize = true;
+			this->label8->Location = System::Drawing::Point(43, 50);
+			this->label8->Name = L"label8";
+			this->label8->Size = System::Drawing::Size(350, 20);
+			this->label8->TabIndex = 0;
+			this->label8->Text = L"SEARCH PRODUCT (CASE SENSITIVE)";
 			// 
 			// tabPage5
 			// 
@@ -543,6 +701,12 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->tabPage3->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			this->tabPage4->ResumeLayout(false);
+			this->tabControl2->ResumeLayout(false);
+			this->tabPage6->ResumeLayout(false);
+			this->tabPage6->PerformLayout();
+			this->tabPage7->ResumeLayout(false);
+			this->tabPage7->PerformLayout();
 			this->tabPage5->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
@@ -576,12 +740,7 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	String^ temp=Convert::ToString(dataGridView1->CurrentRow);
-	int t1 = temp->IndexOf("=");
-	int t2 = temp->IndexOf("}");
-	String^ t3 = temp->Substring(24,t2-t1-1);
-	int row= Convert::ToInt32(t3);
-	delete_conform^ conform = gcnew delete_conform(row);
+	delete_conform^ conform = gcnew delete_conform(getRow(dataGridView1));
 	conform->Show();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -608,17 +767,51 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 private: System::Void dataGridView3_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	String^ temp = Convert::ToString(dataGridView1->CurrentRow);
-	int t1 = temp->IndexOf("=");
-	int t2 = temp->IndexOf("}");
-	String^ t3 = temp->Substring(24, t2 - t1 - 1);
-	int row = Convert::ToInt32(t3);
-	String^ temp1 = Convert::ToString(dataGridView1->CurrentCell);
-	//int t11 = temp1->IndexOf("=");
-	//int t21 = temp1->IndexOf("}");
-	//String^ t31 = temp1->Substring(24, t2 - t1 - 1);
-	//int row = Convert::ToInt32(t31);
-	label1->Text = temp1;
+	update^ _Update = gcnew update(getRow(dataGridView3),getCol(dataGridView3));
+	_Update->Show();
+}
+	   int getRow(System::Windows::Forms::DataGridView^ grid) {
+		   String^ temp = Convert::ToString(grid->CurrentRow);
+		   int t1 = temp->IndexOf("=");
+		   int t2 = temp->IndexOf("}");
+		   String^ t3 = temp->Substring(24, t2 - t1 - 1);
+		   int row = Convert::ToInt32(t3);
+		   return row;
+	   }
+	   int getCol(System::Windows::Forms::DataGridView^ grid) {
+		   String^ temp1 = Convert::ToString(grid->CurrentCell);
+		   int t11 = temp1->IndexOf("=");
+		   int t21 = temp1->IndexOf(",");
+		   String^ t31 = temp1->Substring(t11 + 1, t21 - t11 - 1);
+		   int col = Convert::ToInt32(t31);
+		   return col;
+	   }
+private: System::Void tabPage6_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	int y=Excel->searchProductByName(textBox5->Text);
+	if (y == -1) {
+		label7->Text = "Product Not Found!!!";
+	}
+	else
+	{
+		label7->Text = "PRODUCT NAME: " + Excel->read_data(y, 1) + "\nPRODUCT ID: " + Excel->read_data(y, 2) + "\nPRODUCT PRICE: " + Excel->read_data(y, 3) + "\nPRODUCT QUANTITY: "+Excel->read_data(y, 4);
+	}
+}
+private: System::Void textBox5_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+
+}
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	int y = Excel->searchProductById(textBox6->Text);
+	if (y == -1) {
+		label9->Text = "Product Not Found!!!";
+	}
+	else
+	{
+		label9->Text = "PRODUCT NAME: " + Excel->read_data(y, 1) + "\nPRODUCT ID: " + Excel->read_data(y, 2) + "\nPRODUCT PRICE: " + Excel->read_data(y, 3) + "\nPRODUCT QUANTITY: " + Excel->read_data(y, 4);
+	}
 }
 };
 }

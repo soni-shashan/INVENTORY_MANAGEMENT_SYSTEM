@@ -143,21 +143,23 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				}
 			}
 		}
+
 		int searchProductByName(String^ key) {
 			Book* book = xlCreateXMLBookA();
-			if(book){
-			if (book->load(_filename)) {
-				Sheet* sheet = book->getSheet(0);
-				if (sheet) {
-					for (int i = 0;i < sheet->lastRow();i++) {
-						if (read_data(i, 1) == key) {
-							return i;
+			if (book) {
+				if (book->load(_filename)) {
+					Sheet* sheet = book->getSheet(0);
+					if (sheet) {
+						for (int i = 0;i < sheet->lastRow();i++) {
+							if (read_data(i, 1) == key) {
+								return i;
+							}
 						}
+						book->release();
 					}
-					book->release();
 				}
 			}
-		}
+			return -1;
 		}
 		int searchProductById(String^ key) {
 			Book* book = xlCreateXMLBookA();
@@ -174,7 +176,9 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 					}
 				}
 			}
+			return -1;
 		}
+
 		void updateProduct(int row, int col,String^ info) {
 			row = row + 2;
 			Book* book = xlCreateXMLBookA();

@@ -1,2 +1,15 @@
-﻿C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(3386,5): error MSB3821: Couldn't process file about.resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.
-C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(3386,5): error MSB3821: Couldn't process file MyForm.resx due to its being in the Internet or Restricted zone or having the mark of the web on the file. Remove the mark of the web if you want to process these files.
+﻿  Main.cpp
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(37,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'Main.cpp')
+  
+  MyForm.cpp
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(37,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'MyForm.cpp')
+  
+  Generating Code...
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(127,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::last_data': not all control paths return a value
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(145,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::read_data': not all control paths return a value
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(127,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::last_data': not all control paths return a value
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(145,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::read_data': not all control paths return a value
+  about.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  INVENTORY_MANAGEMENT_SYSTEM.vcxproj -> C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\x64\Debug\INVENTORY_MANAGEMENT_SYSTEM.exe
