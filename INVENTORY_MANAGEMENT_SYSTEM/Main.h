@@ -40,9 +40,23 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::DataGridView^ dataGridView2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::DataGridView^ dataGridView3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column12;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column13;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column14;
+	private: System::Windows::Forms::Button^ button4;
 	public:
-		INVENTORYMANAGEMENTSYSTEM::excel^ Excel = gcnew INVENTORYMANAGEMENTSYSTEM::excel("INVENTORY.xlsx");
-		const char* _filename = "INVENTORY.xlsx";
+		   INVENTORYMANAGEMENTSYSTEM::excel^ Excel = gcnew INVENTORYMANAGEMENTSYSTEM::excel("INVENTORY.xlsx");
+		   const char* _filename = "INVENTORY.xlsx";
 		Main(void)
 		{
 			InitializeComponent();
@@ -95,12 +109,30 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->dataGridView3 = (gcnew System::Windows::Forms::DataGridView());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column12 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column13 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column14 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage5 = (gcnew System::Windows::Forms::TabPage());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->dataGridView2 = (gcnew System::Windows::Forms::DataGridView());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
+			this->tabPage3->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->BeginInit();
+			this->tabPage5->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// tabControl1
@@ -322,6 +354,8 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			// 
 			// tabPage3
 			// 
+			this->tabPage3->Controls->Add(this->button4);
+			this->tabPage3->Controls->Add(this->dataGridView3);
 			this->tabPage3->Location = System::Drawing::Point(4, 29);
 			this->tabPage3->Name = L"tabPage3";
 			this->tabPage3->Padding = System::Windows::Forms::Padding(3);
@@ -330,6 +364,74 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->tabPage3->Text = L"UPDATE PRODUCT";
 			this->tabPage3->UseVisualStyleBackColor = true;
 			this->tabPage3->Click += gcnew System::EventHandler(this, &Main::tabPage3_Click);
+			// 
+			// button4
+			// 
+			this->button4->BackColor = System::Drawing::Color::Red;
+			this->button4->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button4->ForeColor = System::Drawing::Color::White;
+			this->button4->Location = System::Drawing::Point(35, 6);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(124, 37);
+			this->button4->TabIndex = 1;
+			this->button4->Text = L"LOAD DATA";
+			this->button4->UseVisualStyleBackColor = false;
+			this->button4->Click += gcnew System::EventHandler(this, &Main::button4_Click);
+			// 
+			// dataGridView3
+			// 
+			this->dataGridView3->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView3->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->Column7,
+					this->Column11, this->Column12, this->Column13, this->Column14
+			});
+			this->dataGridView3->Location = System::Drawing::Point(24, 49);
+			this->dataGridView3->Name = L"dataGridView3";
+			this->dataGridView3->RowHeadersWidth = 51;
+			this->dataGridView3->RowTemplate->Height = 24;
+			this->dataGridView3->Size = System::Drawing::Size(1704, 830);
+			this->dataGridView3->TabIndex = 0;
+			this->dataGridView3->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Main::dataGridView3_CellContentClick);
+			// 
+			// Column7
+			// 
+			this->Column7->HeaderText = L"SR.NO";
+			this->Column7->MinimumWidth = 6;
+			this->Column7->Name = L"Column7";
+			this->Column7->ReadOnly = true;
+			this->Column7->Width = 125;
+			// 
+			// Column11
+			// 
+			this->Column11->HeaderText = L"PRODUCT NAME";
+			this->Column11->MinimumWidth = 6;
+			this->Column11->Name = L"Column11";
+			this->Column11->ReadOnly = true;
+			this->Column11->Width = 125;
+			// 
+			// Column12
+			// 
+			this->Column12->HeaderText = L"PRODUCT ID";
+			this->Column12->MinimumWidth = 6;
+			this->Column12->Name = L"Column12";
+			this->Column12->ReadOnly = true;
+			this->Column12->Width = 125;
+			// 
+			// Column13
+			// 
+			this->Column13->HeaderText = L"PRODUCT PRICE";
+			this->Column13->MinimumWidth = 6;
+			this->Column13->Name = L"Column13";
+			this->Column13->ReadOnly = true;
+			this->Column13->Width = 125;
+			// 
+			// Column14
+			// 
+			this->Column14->HeaderText = L"PRODUCT QUANTITY";
+			this->Column14->MinimumWidth = 6;
+			this->Column14->Name = L"Column14";
+			this->Column14->ReadOnly = true;
+			this->Column14->Width = 125;
 			// 
 			// tabPage4
 			// 
@@ -343,6 +445,8 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			// 
 			// tabPage5
 			// 
+			this->tabPage5->Controls->Add(this->button3);
+			this->tabPage5->Controls->Add(this->dataGridView2);
 			this->tabPage5->Location = System::Drawing::Point(4, 29);
 			this->tabPage5->Name = L"tabPage5";
 			this->tabPage5->Padding = System::Windows::Forms::Padding(3);
@@ -350,6 +454,74 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->tabPage5->TabIndex = 4;
 			this->tabPage5->Text = L"DISPLAY INVENTORY";
 			this->tabPage5->UseVisualStyleBackColor = true;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::Navy;
+			this->button3->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button3->ForeColor = System::Drawing::Color::White;
+			this->button3->Location = System::Drawing::Point(48, 6);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(267, 41);
+			this->button3->TabIndex = 1;
+			this->button3->Text = L"DISPLAY DATA";
+			this->button3->UseVisualStyleBackColor = false;
+			this->button3->Click += gcnew System::EventHandler(this, &Main::button3_Click);
+			// 
+			// dataGridView2
+			// 
+			this->dataGridView2->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->dataGridView2->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->Column5,
+					this->Column6, this->Column8, this->Column9, this->Column10
+			});
+			this->dataGridView2->Location = System::Drawing::Point(18, 53);
+			this->dataGridView2->Name = L"dataGridView2";
+			this->dataGridView2->RowHeadersWidth = 51;
+			this->dataGridView2->RowTemplate->Height = 24;
+			this->dataGridView2->Size = System::Drawing::Size(1704, 830);
+			this->dataGridView2->TabIndex = 0;
+			this->dataGridView2->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &Main::dataGridView2_CellContentClick);
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"SR.NO.";
+			this->Column5->MinimumWidth = 6;
+			this->Column5->Name = L"Column5";
+			this->Column5->ReadOnly = true;
+			this->Column5->Width = 125;
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"PRODUCT NAME";
+			this->Column6->MinimumWidth = 6;
+			this->Column6->Name = L"Column6";
+			this->Column6->ReadOnly = true;
+			this->Column6->Width = 125;
+			// 
+			// Column8
+			// 
+			this->Column8->HeaderText = L"PRODUCT ID";
+			this->Column8->MinimumWidth = 6;
+			this->Column8->Name = L"Column8";
+			this->Column8->ReadOnly = true;
+			this->Column8->Width = 125;
+			// 
+			// Column9
+			// 
+			this->Column9->HeaderText = L"PRODUCT PRICE";
+			this->Column9->MinimumWidth = 6;
+			this->Column9->Name = L"Column9";
+			this->Column9->ReadOnly = true;
+			this->Column9->Width = 125;
+			// 
+			// Column10
+			// 
+			this->Column10->HeaderText = L"PRODUCT QUANTITY";
+			this->Column10->MinimumWidth = 6;
+			this->Column10->Name = L"Column10";
+			this->Column10->ReadOnly = true;
+			this->Column10->Width = 125;
 			// 
 			// Main
 			// 
@@ -369,6 +541,10 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->tabPage1->PerformLayout();
 			this->tabPage2->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
+			this->tabPage3->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView3))->EndInit();
+			this->tabPage5->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView2))->EndInit();
 			this->ResumeLayout(false);
 
 		}
@@ -416,6 +592,33 @@ private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^
 	for (int i = 0; i < Excel->last_data(); i++) {
 		dataGridView1->Rows->Add(i + 1, Excel->read_data(i, 1), Excel->read_data(i, 2), Excel->read_data(i, 3), Excel->read_data(i, 4));
 	}
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	dataGridView2->Rows->Clear();
+	for (int i = 0; i < Excel->last_data(); i++) {
+		dataGridView2->Rows->Add(i + 1, Excel->read_data(i, 1), Excel->read_data(i, 2), Excel->read_data(i, 3), Excel->read_data(i, 4));
+	}
+}
+private: System::Void dataGridView2_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	dataGridView3->Rows->Clear();
+	for (int i = 0; i < Excel->last_data(); i++) {
+		dataGridView3->Rows->Add(i + 1, Excel->read_data(i, 1), Excel->read_data(i, 2), Excel->read_data(i, 3), Excel->read_data(i, 4));
+	}
+}
+private: System::Void dataGridView3_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	String^ temp = Convert::ToString(dataGridView1->CurrentRow);
+	int t1 = temp->IndexOf("=");
+	int t2 = temp->IndexOf("}");
+	String^ t3 = temp->Substring(24, t2 - t1 - 1);
+	int row = Convert::ToInt32(t3);
+	String^ temp1 = Convert::ToString(dataGridView1->CurrentCell);
+	//int t11 = temp1->IndexOf("=");
+	//int t21 = temp1->IndexOf("}");
+	//String^ t31 = temp1->Substring(24, t2 - t1 - 1);
+	//int row = Convert::ToInt32(t31);
+	label1->Text = temp1;
 }
 };
 }
