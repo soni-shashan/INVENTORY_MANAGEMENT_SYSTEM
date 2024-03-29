@@ -61,7 +61,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
 					int row = sheet->lastRow();
-					int sr = row -1;
+					int sr = row+1;
 					if (sheet) {
 						sheet->writeStr(0, 0, "INVENTORY MANAGEMENT SYSTEM");
 						sheet->writeNum(row, 0, sr);
@@ -80,7 +80,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			if (book) {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
-					int rowToRemove=sr+1;
+					int rowToRemove=sr+2;
 					if (sheet) {
 						sheet->writeStr(0, 0, "INVENTORY MANAGEMENT SYSTEM");
 						int row;
@@ -181,6 +181,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			if (book) {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
+					sheet->writeStr(0, 0, "INVENTORY MANAGEMENT SYSTEM");
 					if (sheet) {
 						if(col==0){}
 						else if (col == 1 || col == 2) {

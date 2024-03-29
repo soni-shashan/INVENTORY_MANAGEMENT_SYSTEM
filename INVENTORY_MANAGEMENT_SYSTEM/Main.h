@@ -401,8 +401,10 @@ private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	String^ temp=Convert::ToString(dataGridView1->CurrentRow);
-	int t = temp->IndexOf("=") + 1;
-	int row= Convert::ToInt32(Convert::ToString(temp[t]));
+	int t1 = temp->IndexOf("=");
+	int t2 = temp->IndexOf("}");
+	String^ t3 = temp->Substring(24,t2-t1-1);
+	int row= Convert::ToInt32(t3);
 	delete_conform^ conform = gcnew delete_conform(row);
 	conform->Show();
 }
