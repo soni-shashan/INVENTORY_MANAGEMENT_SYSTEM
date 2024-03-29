@@ -73,10 +73,10 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(9, 223);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Location = System::Drawing::Point(12, 274);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(130, 47);
+			this->button1->Size = System::Drawing::Size(173, 58);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"START";
 			this->button1->UseVisualStyleBackColor = false;
@@ -93,10 +93,9 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Italic, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::Color::White;
-			this->label2->Location = System::Drawing::Point(68, 18);
-			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
+			this->label2->Location = System::Drawing::Point(91, 22);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(169, 52);
+			this->label2->Size = System::Drawing::Size(208, 62);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"INVENTORY\nMANAGEMENT";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -114,10 +113,10 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->button2->ForeColor = System::Drawing::Color::White;
-			this->button2->Location = System::Drawing::Point(153, 223);
-			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button2->Location = System::Drawing::Point(204, 274);
+			this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(130, 47);
+			this->button2->Size = System::Drawing::Size(173, 58);
 			this->button2->TabIndex = 3;
 			this->button2->Text = L"ABOUT";
 			this->button2->UseVisualStyleBackColor = false;
@@ -125,20 +124,21 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::White;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->ClientSize = System::Drawing::Size(288, 293);
+			this->ClientSize = System::Drawing::Size(381, 351);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(304, 332);
+			this->MaximumSize = System::Drawing::Size(399, 398);
 			this->MinimizeBox = false;
-			this->MinimumSize = System::Drawing::Size(304, 332);
+			this->MinimumSize = System::Drawing::Size(399, 398);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"INVENTORY MANAGEMENT SYSTEM";

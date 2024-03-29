@@ -6,7 +6,20 @@ C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYS
 C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(37,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   (compiling source file 'MyForm.cpp')
   
+  about.cpp
+  delete_conform.cpp
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(37,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'delete_conform.cpp')
+  
+  update.cpp
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(37,15): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file 'update.cpp')
+  
   Generating Code...
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(127,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::last_data': not all control paths return a value
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(145,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::read_data': not all control paths return a value
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(127,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::last_data': not all control paths return a value
+C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(145,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::read_data': not all control paths return a value
 C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(127,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::last_data': not all control paths return a value
 C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(145,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::read_data': not all control paths return a value
 C:\Users\shash\source\repos\INVENTORY_MANAGEMENT_SYSTEM\INVENTORY_MANAGEMENT_SYSTEM\excel.h(127,1): warning C4715: 'INVENTORYMANAGEMENTSYSTEM::excel::last_data': not all control paths return a value
