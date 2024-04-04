@@ -20,7 +20,7 @@ Inventory Management System (IMS) is a desktop application developed in Visual S
 1. Clone the repository to your local machine:
 
     ```bash
-    git clone https://github.com/your_username/inventory-management-system.git
+    git clone https://github.com/soni-shashan/inventory-management-system.git
     ```
 
 2. Ensure you have Visual Studio installed with C++ development tools.
