@@ -12,8 +12,8 @@ Inventory Management System (IMS) is a desktop application developed in Visual S
 
 ## Dependencies
 
-- **libxl**: External library used for handling Excel files.
-- **CLR (.NET Framework)**: Used for creating the GUI.
+- [**libxl**](https://www.libxl.com/documentation.html): External library used for handling Excel files.
+- [**CLR (.NET Framework)**](https://learn.microsoft.com/en-us/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp?view=msvc-170): Used for creating the GUI.
 
 ## Installation
 
