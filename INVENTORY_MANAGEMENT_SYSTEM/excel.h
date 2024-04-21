@@ -1,5 +1,5 @@
 #pragma once
-#include"libxl.h"
+#include"libxl/libxl.h"
 #include<cstring>
 #include<cmath>
 using namespace libxl;
@@ -61,7 +61,11 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
 					int row = sheet->lastRow();
+<<<<<<< HEAD
+					int sr = row-1;
+=======
 					int sr = row-2;
+>>>>>>> caf9767ca46b54a9fe2b2f649ff1ad40741e53f7
 					if (sheet) {
 						sheet->writeStr(0, 0, "INVENTORY MANAGEMENT SYSTEM");
 						sheet->writeNum(row, 0, sr);

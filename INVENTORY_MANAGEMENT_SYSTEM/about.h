@@ -53,6 +53,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+<<<<<<< HEAD
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(about::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
@@ -116,6 +117,71 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
+=======
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(about::typeid));
+			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->SuspendLayout();
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::Blue;
+			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::Color::White;
+			this->button1->Location = System::Drawing::Point(116, 258);
+			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(149, 65);
+			this->button1->TabIndex = 1;
+			this->button1->Text = L"OK";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &about::button1_Click);
+			// 
+			// label1
+			// 
+			this->label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+				| System::Windows::Forms::AnchorStyles::Left)
+				| System::Windows::Forms::AnchorStyles::Right));
+			this->label1->AutoSize = true;
+			this->label1->BackColor = System::Drawing::Color::WhiteSmoke;
+			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::Navy;
+			this->label1->Location = System::Drawing::Point(9, 9);
+			this->label1->Name = L"label1";
+			this->label1->Padding = System::Windows::Forms::Padding(3, 2, 3, 42);
+			this->label1->Size = System::Drawing::Size(351, 249);
+			this->label1->TabIndex = 2;
+			this->label1->Text = L"The project was developed by\nShashan Lumbhani (23CS042),\nBanti Patel (23CS058), a"
+				L"nd \nDhaval Patel (23CS060), under\nthe guidance of Assistant \nProfessor Pinal Han"
+				L"sora and\nAbhishek Patel.";
+			this->label1->Click += gcnew System::EventHandler(this, &about::label1_Click);
+			// 
+			// about
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(381, 351);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->button1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(399, 398);
+			this->MinimizeBox = false;
+			this->MinimumSize = System::Drawing::Size(399, 398);
+			this->Name = L"about";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"ABOUT";
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
+>>>>>>> caf9767ca46b54a9fe2b2f649ff1ad40741e53f7
 		}
 #pragma endregion
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
