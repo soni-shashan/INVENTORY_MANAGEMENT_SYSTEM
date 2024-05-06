@@ -34,9 +34,9 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 			if (name == nullptr)
 				return nullptr;
 
-			int length = strlen(name);
+			size_t length = strlen(name);
 			String^ result = gcnew String("");
-			for (int i = 0; i < length; i++) {
+			for (size_t i = 0; i < length; i++) {
 				result += static_cast<wchar_t>(name[i]);
 			}
 			return result;
@@ -61,11 +61,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 				if (book->load(_filename)) {
 					Sheet* sheet = book->getSheet(0);
 					int row = sheet->lastRow();
-<<<<<<< HEAD
-					int sr = row-1;
-=======
 					int sr = row-2;
->>>>>>> caf9767ca46b54a9fe2b2f649ff1ad40741e53f7
 					if (sheet) {
 						sheet->writeStr(0, 0, "INVENTORY MANAGEMENT SYSTEM");
 						sheet->writeNum(row, 0, sr);
@@ -128,6 +124,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 					}
 				}
 			}
+			return 0;
 		}
 		String^ read_data(int row, int col) {
 			row = row + 2;
@@ -146,6 +143,7 @@ namespace INVENTORYMANAGEMENTSYSTEM {
 					}
 				}
 			}
+			return "";
 		}
 
 		int searchProductByName(String^ key) {
